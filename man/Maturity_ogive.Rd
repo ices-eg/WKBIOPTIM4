@@ -7,10 +7,10 @@
 Maturity_ogive(data = simulation_biodata)
 }
 \arguments{
-\item{data}{text}
+\item{data}{Dataframe with information from the simulations, containning thefollowing variables: length, maturity (0- immature; 1  - mature); ID_sim (identification of the number of the simulation run); type (number of individuals selected in the current simulation).}
 }
 \value{
-L25 (...) , L50, L75
+L25 (length at which 25% of the individuals are mature), L50 (length at which 50% of the individuals are mature), L75 (length at which 75% of the individuals are mature)
 }
 \description{
 Maturity ogive parameters estimation (L25, L50, L75)

@@ -2,16 +2,16 @@
 
 #' Maturity ogive parameters estimation (L25, L50, L75)
 #'
-#' @param data text
+#' @param data  Dataframe with information from the simulations, containning thefollowing variables: length, maturity (0- immature; 1  - mature); ID_sim (identification of the number of the simulation run); type (number of individuals selected in the current simulation).
 #'
-#' @return L25 (...) , L50, L75
+#' @return L25 (length at which 25% of the individuals are mature), L50 (length at which 50% of the individuals are mature), L75 (length at which 75% of the individuals are mature)
 #' @export
 #'
 #' @examples
 #'
 #'
 Maturity_ogive <- function (data=simulation_biodata){
-  sim<-unique(data$ID_sim)  ## identification of the number of the simulation process
+  sim<-unique(data$ID_sim)  ## identification of the number of the simulation run
   results<-matrix(nrow=length(sim),ncol=6)
   for(nb in 1: length(sim))
   {
