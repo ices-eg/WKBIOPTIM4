@@ -11,5 +11,5 @@
 
 average_of <- function(x){
   output <- mean(x)
-  return
+  return(output)
 }
