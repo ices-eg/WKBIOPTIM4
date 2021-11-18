@@ -2,7 +2,7 @@
 % Please edit documentation in R/make_summary_numeric.R
 \name{make_summary_numeric}
 \alias{make_summary_numeric}
-\title{Summary statistics calculation: mean length, min, max, MWCV}
+\title{Summary statistics calculation: mean length, se, median, min, max,  n classes sampled}
 \usage{
 make_summary_numeric(df1, variable, a, b)
 }
@@ -19,9 +19,10 @@ make_summary_numeric(df1, variable, a, b)
 table reporting the different estimates
 }
 \description{
-Summary statistics calculation: mean length, min, max, MWCV
+Summary statistics calculation: mean length, se, median, min, max,  n classes sampled
 }
 \examples{
 make_summary_numeric(example_samples,"lenCls",a=0.0006,b=3)
+
 
 }

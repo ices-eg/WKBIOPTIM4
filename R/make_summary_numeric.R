@@ -1,4 +1,4 @@
-#' Summary statistics calculation: mean length, min, max, MWCV
+#' Summary statistics calculation: mean length, se, median, min, max,  n classes sampled
 #'
 #' @param y data frame of sampling data
 #' @param variable "lenCls"
@@ -11,17 +11,14 @@
 #' @examples
 #'make_summary_numeric(example_samples,"lenCls",a=0.0006,b=3)
 #'
+#'
 make_summary_numeric<-function(df1, variable, a, b){
   # from the script of Nuno Prista 2017
 
   x <- df1[,variable]
 
-  # adjustments for processing
-  #if(is.vector(x)) {x<-data.frame(dummy=1,x); colnames(x)[2]<-variable}
-  if(is.vector(x) | is.factor(x[variable])) {x<-data.frame(dummy=1,x); colnames(x)[2]<-variable}
-  # if(is.factor(x[,variable])) x[,variable]<-as.numeric(as.character(x[,variable]))
-  # if(is.factor(df1[,variable])) df1[,variable]<-as.numeric(as.character(df1[,variable]))
-  # summary
+   if(is.vector(x) | is.factor(x[variable])) {x<-data.frame(dummy=1,x); colnames(x)[2]<-variable}
+   # summary
   n_indiv = nrow(x)
   #NAs_x<-sum(is.na(x[,variable]))
   mean_x<-mean(x[,variable], na.rm=TRUE)
@@ -33,13 +30,10 @@ make_summary_numeric<-function(df1, variable, a, b){
   #ATTT!!!!
   if(variable == "lenCls") estim_weight_sample <- sum(exp(a)*x$lenCls^b) else {estim_weight_sample<-NA}
   # mean weighed CV
-  sigma_i<-sqrt(nrow(x)*as.matrix(prop.table(table(x[,variable]))*(1-prop.table(table(x[,variable])))))
-  cv_i <- sigma_i / (nrow(x)*as.matrix(prop.table(table(x[,variable]))))
-  MWCV<-round(sum(sigma_i)/nrow(x)*100,1)
 
   # output
   DF<-data.frame(var=variable, n = n_indiv, estim_weight = estim_weight_sample,
              mean=mean_x, se = stand_err_mean_x, cv=round(stand_err_mean_x/mean_x*100,1),
-             min = min_x, median = median_x, max = max_x, n_class_sampled=n_class_sampled_x, MWCV = MWCV)
+             min = min_x, median = median_x, max = max_x, n_class_sampled=n_class_sampled_x)
 return(DF)
   }
