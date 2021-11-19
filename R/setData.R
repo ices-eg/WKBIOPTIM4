@@ -10,12 +10,13 @@
 #' @param selected.year Numeric. The year
 #' @param selected.quarter Numeric. The quarter
 #' @param selected.area String. The year
-#' @param selected.metier String. The metier (optional)
-#' @param selected.sampType String. The sample type (optional)
+#' @param selected.metier String. The metier (optional?)
+#' @param selected.sampType String. The sample type (optional?)
 #' @param level String. Aggregation level. Default is "trip"
 #' @param delta Numeric. The bin width (?). Default is 1,
 #'
-#' @return A data.frame
+#' @return A data.frame. Two histogram plots are produced (one of these only if
+#'   `delta > 1`)
 #'
 #' @import ggplot2
 #'

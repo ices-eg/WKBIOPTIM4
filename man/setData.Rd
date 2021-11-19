@@ -36,16 +36,17 @@ setData(
 
 \item{selected.area}{String. The year}
 
-\item{selected.metier}{String. The metier (optional)}
+\item{selected.metier}{String. The metier (optional?)}
 
-\item{selected.sampType}{String. The sample type (optional)}
+\item{selected.sampType}{String. The sample type (optional?)}
 
 \item{level}{String. Aggregation level. Default is "trip"}
 
 \item{delta}{Numeric. The bin width (?). Default is 1,}
 }
 \value{
-A data.frame
+A data.frame. Two histogram plots are produced (one of these only if
+  `delta > 1`)
 }
 \description{
 Sets the data for use in ADV analysis....
