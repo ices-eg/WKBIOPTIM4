@@ -28,3 +28,45 @@
 
 # Documentation for other datasets get added below this one - the order is not important.
 #
+
+
+
+#' HH data
+#'
+#' @description HH data from Julia
+#'
+#' @format Data frame
+#'
+#' @md
+#'
+#' @source Julia Wischnewski
+#'
+#' @seealso [`setData`] - Function to use these data
+"HH_julia"
+
+#' HL data
+#'
+#' @description HL data from Julia
+#'
+#' @format Data frame
+#'
+#' @md
+#'
+#' @source Julia Wischnewski
+#'
+#' @seealso [`setData`] - Function to use these data
+"HL_julia"
+
+#' SL data
+#'
+#' @description SL data from Julia
+#'
+#' @format Data frame
+#'
+#' @md
+#'
+#' @source Julia Wischnewski
+#'
+#' @seealso [`setData`] - Function to use these data
+"SL_julia"
+
