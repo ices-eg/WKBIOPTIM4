@@ -16,5 +16,5 @@ CV by age class and total CV
 Function to calculate CV on ALK
 }
 \examples{
-CV_ALK(DF)
+CV_ALK(example_ageLength)
 }

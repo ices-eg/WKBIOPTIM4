@@ -2,23 +2,21 @@
 % Please edit documentation in R/MWCV.R
 \name{MWCV}
 \alias{MWCV}
-\title{Summary statistics calculation: mean length, se, median, min, max, MWCV, n classes sampled}
+\title{MWCV (mean weigthed CV) calculation}
 \usage{
 MWCV(df1, variable)
 }
 \arguments{
-\item{variable}{"lenCls"}
+\item{df1}{data frame of sampled data by length class in CA format (RDB) (individual measurements)}
 
-\item{y}{data frame of sampling data}
+\item{variable}{"lenCls"}
 }
 \value{
 MWCV
 }
 \description{
-Summary statistics calculation: mean length, se, median, min, max, MWCV, n classes sampled
+MWCV (mean weigthed CV) calculation
 }
 \examples{
 MWCV(example_samples,"lenCls")
-
-
 }
