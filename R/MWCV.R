@@ -1,15 +1,11 @@
-#' Summary statistics calculation: mean length, se, median, min, max, MWCV, n classes sampled
-#'
-#' @param y data frame of sampling data
+#' MWCV (mean weigthed CV) calculation
+#' @param df1 data frame of sampled data by length class in CA format (RDB) (individual measurements)
 #' @param variable "lenCls"
-#'
 #' @return MWCV
 #' @export
-#'
+#' @importFrom stats median sd
 #' @examples
 #'MWCV(example_samples,"lenCls")
-#'
-#'
 MWCV<-function(df1, variable){
 
 

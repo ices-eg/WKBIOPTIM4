@@ -5,8 +5,7 @@
 #' @return CV by age class and total CV
 #' @export
 #'
-#' @examples
-#' CV_ALK(DF)
+#' @examples CV_ALK(example_ageLength)
 
 CV_ALK <- function (DF) {
 
