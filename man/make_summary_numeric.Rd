@@ -7,13 +7,13 @@
 make_summary_numeric(df1, variable, a, b)
 }
 \arguments{
+\item{df1}{data frame of sampling data}
+
 \item{variable}{"lenCls"}
 
 \item{a}{coefficient of length-weight relationship}
 
 \item{b}{coefficient of length-weight relationship}
-
-\item{y}{data frame of sampling data}
 }
 \value{
 table reporting the different estimates
@@ -23,6 +23,5 @@ Summary statistics calculation: mean length, se, median, min, max,  n classes sa
 }
 \examples{
 make_summary_numeric(example_samples,"lenCls",a=0.0006,b=3)
-
 
 }
