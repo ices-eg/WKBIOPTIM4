@@ -1,16 +1,11 @@
 #' Summary statistics calculation: mean length, se, median, min, max,  n classes sampled
-#'
-#' @param y data frame of sampling data
+#' @param df1 data frame of sampling data
 #' @param variable "lenCls"
 #' @param a coefficient of length-weight relationship
 #' @param b coefficient of length-weight relationship
-#'
 #' @return table reporting the different estimates
 #' @export
-#'
-#' @examples
-#'make_summary_numeric(example_samples,"lenCls",a=0.0006,b=3)
-#'
+#' @examples make_summary_numeric(example_samples,"lenCls",a=0.0006,b=3)
 #'
 make_summary_numeric<-function(df1, variable, a, b){
   # from the script of Nuno Prista 2017
